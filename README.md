@@ -55,11 +55,6 @@ Each sub-agent is a focused skill (see `SKILL.md` in each folder):
 | `distribution-timing` | Scheduling and repurposing |
 | `research-factcheck` | Citations and verification |
 
-## Branches
-
-- **`main`** — Open-source template (this branch)
-- **`mondo`** — Mondo-specific instance with full config
-
 ## License
 
 MIT
