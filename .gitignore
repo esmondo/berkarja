@@ -7,11 +7,19 @@ __pycache__/
 venv/
 .venv/
 env/
+.eggs/
+*.egg-info/
+*.egg
 
 # Environment
 .env
 .env.local
+.env.*.local
 *.env
+
+# User config (contains API keys, brand data)
+content-creation-system/config.yaml
+content-creation-system/config/
 
 # IDE
 .idea/
