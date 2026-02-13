@@ -2,14 +2,6 @@
 # Format, length, and spec requirements per platform
 
 platforms:
-  tiktok:
-    formats:
-      - short_form
-      - duet
-    specs:
-      short_form:
-        duration_max: 60
-        aspect_ratio: "9:16"
   instagram:
     formats:
       - feed_post

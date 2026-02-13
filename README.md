@@ -12,36 +12,53 @@ Multi-agent content creation system with real-time trend intelligence. Coordinat
 - **Performance analysis** → post-publish tracking
 - **Research** → fact-checking and citations
 
-## Repository Structure
-
-| Folder | Purpose |
-|--------|---------|
-| **`content-creation-system-oss/`** | **Start here.** Generic, template-based instance. Use this for your own brand. See [SETUP.md](content-creation-system-oss/SETUP.md). |
-| `content-creation-system/` | Full instance with config templates and setup wizard. |
-| `content-creation-system-mondo/` | Example instance (Mondo config). |
-
-For new users: clone and use **`content-creation-system-oss/`**.
-
 ## Quick Start
 
 ```bash
-cd content-creation-system-oss
+cd content-creation-system
 pip install -r requirements.txt
 cp config.template.yaml config.yaml
 # Edit config.yaml with your brand, platforms, and API keys
+```
+
+Or use the interactive setup wizard:
+
+```bash
+python sub-agents/setup-wizard/interview.py
+```
+
+See [content-creation-system/SETUP.md](content-creation-system/SETUP.md) for full onboarding.
+
+## Repository Structure
+
+```
+content-creation-system/     # Single package — configure for your brand
+├── sub-agents/              # Validator, planner, trends, persona, analyst, distributor, research, setup-wizard
+├── knowledge-base/          # Templates and best practices
+├── scripts/                 # Shared utilities
+├── config.template.yaml     # Copy to config.yaml and customize
+└── SETUP.md                 # Detailed setup guide
 ```
 
 ## Sub-Agents
 
 Each sub-agent is a focused skill (see `SKILL.md` in each folder):
 
-- `content-idea-validator` — Score ideas against rubric
-- `content-planner` — Generate production blueprints
-- `trend-intelligence` — Crawl and analyze trends
-- `persona-voice` — Brand alignment
-- `performance-analyst` — Metrics and patterns
-- `distribution-timing` — Scheduling and repurposing
-- `research-factcheck` — Citations and verification
+| Agent | Purpose |
+|-------|---------|
+| `setup-wizard` | Interactive onboarding, generates config from interview |
+| `content-idea-validator` | Score ideas against rubric |
+| `content-planner` | Generate production blueprints |
+| `trend-intelligence` | Crawl and analyze trends |
+| `persona-voice` | Brand alignment |
+| `performance-analyst` | Metrics and patterns |
+| `distribution-timing` | Scheduling and repurposing |
+| `research-factcheck` | Citations and verification |
+
+## Branches
+
+- **`main`** — Open-source template (this branch)
+- **`mondo`** — Mondo-specific instance with full config
 
 ## License
 

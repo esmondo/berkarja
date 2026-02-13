@@ -14,6 +14,12 @@ pip install -r requirements.txt
 
 ## 3. Configure
 
+**Option A — Interactive setup:**
+```bash
+python sub-agents/setup-wizard/interview.py
+```
+
+**Option B — Manual:**
 ```bash
 cp config.template.yaml config.yaml
 ```
