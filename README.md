@@ -2,6 +2,14 @@
 
 Multi-agent content creation system with real-time trend intelligence. Coordinates content from ideation through planning to publishing.
 
+## Install (copy-paste, works from any directory)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/esmondo/berkarja/main/scripts/install.sh | bash
+```
+
+Installs to `~/.berkarja` by default. Custom path: `curl -fsSL ... | bash -s -- ~/my-path`
+
 ## Overview
 
 - **Idea validation** → novelty, platform fit, viability
@@ -12,18 +20,10 @@ Multi-agent content creation system with real-time trend intelligence. Coordinat
 - **Performance analysis** → post-publish tracking
 - **Research** → fact-checking and citations
 
-## Quick Start
+## Quick Start (after install)
 
 ```bash
-cd content-creation-system
-pip install -r requirements.txt
-cp config.template.yaml config.yaml
-# Edit config.yaml with your brand, platforms, and API keys
-```
-
-Or use the interactive setup wizard:
-
-```bash
+cd ~/.berkarja/content-creation-system
 python sub-agents/setup-wizard/interview.py
 ```
 
