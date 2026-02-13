@@ -4,11 +4,20 @@ Multi-agent content creation system with real-time trend intelligence. Coordinat
 
 ## Install (copy-paste, works from any directory)
 
+**Full install** (Python, setup wizard, config):
 ```bash
 curl -fsSL https://raw.githubusercontent.com/esmondo/berkarja/main/scripts/install.sh | bash
 ```
 
-Installs to `~/.berkarja` by default. Custom path: `curl -fsSL ... | bash -s -- ~/my-path`
+**Skills only** (global, any directory — no Python):
+```bash
+npx skills add esmondo/berkarja
+```
+Installs to your agent's skills directory. Works from any cwd. Restart your agent to load.
+
+*Alternative (Cursor-only):* `curl -fsSL https://raw.githubusercontent.com/esmondo/berkarja/main/scripts/install-skill-only.sh | bash`
+
+Full install custom path: `curl -fsSL .../install.sh | bash -s -- ~/my-path`
 
 ## Overview
 
@@ -32,12 +41,13 @@ See [content-creation-system/SETUP.md](content-creation-system/SETUP.md) for ful
 ## Repository Structure
 
 ```
-content-creation-system/     # Single package — configure for your brand
-├── sub-agents/              # Validator, planner, trends, persona, analyst, distributor, research, setup-wizard
-├── knowledge-base/          # Templates and best practices
-├── scripts/                 # Shared utilities
-├── config.template.yaml     # Copy to config.yaml and customize
-└── SETUP.md                 # Detailed setup guide
+skills/content-creation/         # npx skills add (skill-only, global)
+content-creation-system/        # Full package — configure for your brand
+├── sub-agents/                 # Validator, planner, trends, persona, analyst, distributor, research, setup-wizard
+├── knowledge-base/              # Templates and best practices
+├── scripts/                    # Shared utilities
+├── config.template.yaml        # Copy to config.yaml and customize
+└── SETUP.md                    # Detailed setup guide
 ```
 
 ## Sub-Agents
