@@ -1,0 +1,19 @@
+# Production Checklist
+# Pre-publish verification steps
+
+phases:
+  pre_production:
+    - Research complete
+    - Script/outline approved
+    - Assets sourced or created
+
+  production:
+    - Content drafted per platform specs
+    - Copy edited
+    - Visuals finalized
+
+  pre_publish:
+    - Fact-check complete
+    - Links verified
+    - Hashtags/keywords added
+    - Scheduling confirmed

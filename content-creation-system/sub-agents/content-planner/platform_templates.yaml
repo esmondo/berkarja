@@ -1,0 +1,52 @@
+# Platform Templates
+# Format, length, and spec requirements per platform
+
+platforms:
+  tiktok:
+    formats:
+      - short_form
+      - duet
+    specs:
+      short_form:
+        duration_max: 60
+        aspect_ratio: "9:16"
+  instagram:
+    formats:
+      - feed_post
+      - story
+      - reels
+    specs:
+      feed_post:
+        caption_max: 2200
+        image_count: 1
+      reels:
+        duration_max: 90
+        aspect_ratio: "9:16"
+
+  twitter:
+    formats:
+      - tweet
+      - thread
+    specs:
+      tweet:
+        char_max: 280
+      thread:
+        tweets_max: 25
+
+  linkedin:
+    formats:
+      - post
+      - article
+    specs:
+      post:
+        char_max: 3000
+
+  youtube:
+    formats:
+      - short
+      - long_form
+    specs:
+      short:
+        duration_max: 60
+      long_form:
+        duration_min: 300

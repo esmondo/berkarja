@@ -1,0 +1,14 @@
+{
+  "entries": [
+    {
+      "id": "example_1",
+      "title": "Sample video title",
+      "platform": "youtube",
+      "published_at": "2025-01-01",
+      "topic": "topic_name",
+      "performance": { "views": 0, "engagement": 0 }
+    }
+  ],
+  "platforms": ["youtube", "instagram", "tiktok"],
+  "last_updated": null
+}

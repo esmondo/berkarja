@@ -1,0 +1,18 @@
+# Platform Schedules
+# Optimal posting windows and constraints (aligned with config.yaml platforms)
+
+platforms:
+  tiktok:
+    best_hours: [12, 18, 21]
+    best_days: [2, 3, 4, 5]
+    timezone: UTC
+
+  instagram:
+    best_hours: [9, 12, 18, 21]
+    best_days: [3, 4, 5]
+    timezone: UTC
+
+  youtube:
+    best_hours: [9, 14, 18]
+    best_days: [4, 5, 6]
+    timezone: UTC

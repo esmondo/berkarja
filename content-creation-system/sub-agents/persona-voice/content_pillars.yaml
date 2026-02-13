@@ -1,0 +1,18 @@
+# Content Pillars — Mondo
+# Core themes and messaging pillars (aligned with config.yaml brand_pillars)
+
+pillars:
+  - id: pillar_1
+    name: Neurotechnology
+    weight: 0.35
+    description: EEG, BCI, attention detection, brain-computer interfaces, neuroscience tools
+
+  - id: pillar_2
+    name: AI Product
+    weight: 0.35
+    description: AI workflows, product development, tooling, workflows for creators and builders
+
+  - id: pillar_3
+    name: Personal Journey
+    weight: 0.3
+    description: Learning in public, creator journey, productivity, experiments, wins

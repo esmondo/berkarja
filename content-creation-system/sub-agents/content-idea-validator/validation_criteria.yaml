@@ -1,0 +1,27 @@
+# Validation Criteria for Content Ideas
+
+dimensions:
+  - id: relevance
+    name: Audience Relevance
+    weight: 0.25
+    description: How well the idea addresses audience needs and interests
+
+  - id: uniqueness
+    name: Uniqueness
+    weight: 0.2
+    description: Differentiation from existing content in the space
+
+  - id: feasibility
+    name: Production Feasibility
+    weight: 0.2
+    description: Resources, time, and technical requirements
+
+  - id: alignment
+    name: Brand Alignment
+    weight: 0.2
+    description: Fit with brand voice, pillars, and goals
+
+  - id: impact
+    name: Potential Impact
+    weight: 0.15
+    description: Expected reach, engagement, or conversion potential

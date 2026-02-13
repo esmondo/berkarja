@@ -1,0 +1,43 @@
+# Mondo — Personal Configuration
+
+user:
+  name: Mondo
+  brand_pillars:
+    - neurotechnology
+    - AI_product
+    - personal_journey
+  platforms:
+    - tiktok
+    - instagram
+    - youtube
+
+content_velocity:
+  weekly_target: 3
+  effort_threshold: medium
+
+api_keys:
+  ensemble_data: ${ENSEMBLE_KEY}
+  analytics: ${ANALYTICS_KEY}
+
+memory:
+  vector_db: pinecone
+  refresh_cycle: weekly
+
+paths:
+  knowledge_base: knowledge-base/
+  scripts: scripts/
+  sub_agents: sub-agents/
+
+sub_agents:
+  enabled:
+    - content-idea-validator
+    - content-planner
+    - trend-intelligence
+    - persona-voice
+    - performance-analyst
+    - distribution-timing
+    - research-factcheck
+
+output:
+  format: markdown
+  include_metadata: true

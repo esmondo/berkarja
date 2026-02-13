@@ -1,0 +1,16 @@
+# Brand Voice Guidelines
+# Tone, vocabulary, and style for content
+
+tone:
+  primary: professional
+  secondary: friendly
+  avoid: sarcastic, aggressive, passive
+
+vocabulary:
+  use: clear, concise, inclusive
+  avoid: jargon, slang, jargon-heavy terms
+
+style:
+  sentence_length: varied
+  punctuation: minimal
+  formatting: scannable

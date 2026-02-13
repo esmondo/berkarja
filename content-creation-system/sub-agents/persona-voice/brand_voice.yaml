@@ -1,0 +1,24 @@
+# Brand Voice Guidelines — Mondo
+# Tone, vocabulary, and style for content
+
+tone:
+  primary: authentic
+  secondary: curious
+  avoid: preachy, salesy, passive
+
+vocabulary:
+  use: clear, accessible, tech-informed
+  avoid: buzzwords, gatekeeping jargon
+
+style:
+  sentence_length: punchy
+  punctuation: intentional
+  formatting: scannable, emoji-sparing
+
+themes:
+  - neurotechnology
+  - AI_product
+  - personal_journey
+  - productivity
+  - creator-tools
+  - learning-in-public

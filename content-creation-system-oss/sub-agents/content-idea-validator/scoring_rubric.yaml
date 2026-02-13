@@ -1,0 +1,14 @@
+# Scoring Rubric for Content Ideas
+# Each dimension scored 1-5
+
+score_levels:
+  1: Reject - Does not meet minimum standards
+  2: Weak - Significant gaps, not recommended
+  3: Acceptable - Meets baseline, consider with improvements
+  4: Strong - Good fit, recommended for production
+  5: Excellent - Exceptional fit, high priority
+
+thresholds:
+  minimum_passing: 3.0
+  recommended: 4.0
+  automatic_approval: 4.5

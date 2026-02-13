@@ -1,0 +1,23 @@
+# Content Pillars
+# Core themes and messaging pillars
+
+pillars:
+  - id: pillar_1
+    name: Education
+    weight: 0.3
+    description: How-to, tips, tutorials
+
+  - id: pillar_2
+    name: Inspiration
+    weight: 0.25
+    description: Stories, case studies, wins
+
+  - id: pillar_3
+    name: Community
+    weight: 0.25
+    description: Engagement, UGC, conversations
+
+  - id: pillar_4
+    name: Promotion
+    weight: 0.2
+    description: Offers, launches, CTAs

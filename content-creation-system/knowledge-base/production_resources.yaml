@@ -1,0 +1,17 @@
+# Production Resources
+# Tools, templates, and asset references
+
+tools:
+  design: []
+  video: []
+  scheduling: []
+
+templates:
+  scripts: []
+  briefs: []
+  captions: []
+
+asset_libraries:
+  stock_images: []
+  music: []
+  fonts: []

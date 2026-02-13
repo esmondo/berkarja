@@ -1,0 +1,20 @@
+# Trusted Sources for Fact-Checking
+# Source definitions and access parameters
+
+sources:
+  - id: wikipedia
+    type: api
+    domain: en.wikipedia.org
+    priority: high
+
+  - id: scholarly
+    type: search
+    domains:
+      - scholar.google.com
+      - pubmed.ncbi.nlm.nih.gov
+    priority: high
+
+  - id: official
+    type: whitelist
+    domains: []
+    priority: highest

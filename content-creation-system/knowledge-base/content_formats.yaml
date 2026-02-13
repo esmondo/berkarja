@@ -1,0 +1,26 @@
+# Content Formats
+# Definitions for format types and requirements
+
+formats:
+  short_form:
+    - reels
+    - tiktok
+    - shorts
+    duration_max: 60
+
+  long_form:
+    - youtube_video
+    - blog_post
+    - linkedin_article
+    duration_min: 300
+
+  static:
+    - feed_post
+    - carousel
+    - tweet
+    image_count_max: 10
+
+  story:
+    - instagram_story
+    - facebook_story
+    duration_max: 15

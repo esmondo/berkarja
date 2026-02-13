@@ -1,0 +1,20 @@
+# Brand Voice Template
+# Copy this file, rename (e.g. my_brand_voice.yaml), and fill in your values
+
+tone:
+  primary:       # e.g. professional, casual, playful
+  secondary:     # e.g. friendly, authoritative
+  avoid:         # e.g. preachy, salesy
+
+vocabulary:
+  use:           # e.g. clear, technical, simple
+  avoid:         # e.g. jargon, buzzwords
+
+style:
+  sentence_length:
+  punctuation:
+  formatting:
+
+themes:          # Your content pillars
+  - 
+  - 
