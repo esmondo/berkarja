@@ -15,28 +15,115 @@ sub_agents:
 
 # Content Creation System
 
-Coordinate content from ideation to publishing. Route to sub-workflows as needed.
+Multi-agent workflow for social media content from ideation to publishing. Coordinates validation, trend intelligence, planning, and distribution.
 
-## Routing Logic
+**Install:** `npx skills add esmondo/berkarja`
 
-- **Setup / full install** → `curl -fsSL https://raw.githubusercontent.com/esmondo/berkarja/main/scripts/install.sh | bash`
-- **Idea submitted** → validator + trends
-- **Planning** → planner
-- **Performance** → analyst
-- **Fact-checking** → research
-- **Brand consistency** → persona/voice
+---
 
-## Sub-Workflows
+## When to Apply
 
-| Task | Logic |
-|------|-------|
-| Validator | Novelty (0-1), platform fit (TikTok/IG/YT), viability |
-| Trends | Active/rising/saturated, projection |
-| Planner | Idea → blueprint (hook, structure, format) |
-| Persona | Tone, pillars, past content alignment |
+Reference this skill when the user:
 
-## References
+- Submits a content idea and wants validation (novelty, platform fit)
+- Asks "is this idea worth making?" or "will this perform on TikTok/IG/YT?"
+- Wants a production plan or blueprint for a validated idea
+- Asks about trends (what's active, rising, saturated)
+- Needs brand voice alignment check on a draft
+- Wants to repurpose content across platforms
+- Asks about performance of past content
 
-- `knowledge-base/platform_best_practices.md` — platform hooks, formats
-- `sub-agents/content-idea-validator/validation_criteria.yaml` — scoring
-- `sub-agents/content-planner/SKILL.md` — blueprint structure
+---
+
+## Sub-Workflows by Priority
+
+| Priority | Workflow   | When                     | Load Reference                    |
+|----------|------------|---------------------------|-----------------------------------|
+| 1        | Validator  | Idea submitted            | `validation_criteria.yaml`, rubric |
+| 2        | Trends     | Need trend context        | —                                 |
+| 3        | Planner    | Validated idea → blueprint| `planner-structure` (below)        |
+| 4        | Persona    | Brand consistency check   | `brand_voice`, `content_pillars`   |
+| 5        | Analyst    | Post-publish metrics     | —                                 |
+| 6        | Distributor| Scheduling, repurposing   | —                                 |
+| 7        | Research   | Fact-checking, citations  | —                                 |
+
+---
+
+## Quick Reference
+
+### Validator Output Format
+```json
+{
+  "novelty": 0.75,
+  "fit": { "tiktok": 0.9, "ig": 0.7, "yt": 0.5 },
+  "viable": true,
+  "rec": ["Strong TikTok hook", "Add visual B-roll for IG"]
+}
+```
+
+### Platform Fit Criteria
+- **TikTok**: Hook in 3s, trend-ready, audio-driven
+- **IG**: Visual quality, 15–90s, editing complexity
+- **YT**: Depth potential, 8–15min, retention structure
+
+### Blueprint Structure (Planner)
+```yaml
+concept: [1-line summary]
+platform_primary: [TikTok/IG/YT]
+format: [talking head/B-roll/screen record]
+hook: [First 3s script]
+structure: [intro/body/CTA]
+repurpose: [vertical→horizontal adaptations]
+```
+
+---
+
+## How to Use
+
+### Step 1: Identify the Request
+
+| User says…                    | Route to          |
+|------------------------------|-------------------|
+| "I have an idea: …"          | Validator + Trends |
+| "Plan this for production"   | Planner           |
+| "Check if this fits my brand"| Persona           |
+| "How did my last video do?"  | Analyst           |
+
+### Step 2: Load References as Needed
+
+| Task                | Reference File                                           |
+|---------------------|----------------------------------------------------------|
+| Platform rules      | `knowledge-base/platform_best_practices.md`              |
+| Validation scoring  | `sub-agents/content-idea-validator/validation_criteria.yaml` |
+| Scoring rubric      | `sub-agents/content-idea-validator/scoring_rubric.yaml`  |
+| Blueprint template  | `sub-agents/content-planner/SKILL.md`                    |
+
+### Step 3: Full Setup (Optional)
+
+For Python setup wizard and config:
+```bash
+curl -fsSL https://raw.githubusercontent.com/esmondo/berkarja/main/scripts/install.sh | bash
+```
+
+---
+
+## Example Flow
+
+**User:** "I want to make a video about EEG signal artifacts in meditation research"
+
+1. **Validator**: Score novelty (is this overdone?), platform fit (TikTok vs YT depth), viability
+2. **Trends**: Check if "meditation tech" or "neurotech" is active/saturated
+3. **Planner**: If validated → generate blueprint (hook, structure, format)
+4. **Persona**: If user has brand_voice → check alignment before final script
+
+---
+
+## Validation Dimensions (Weights)
+
+| Dimension  | Weight | Description                          |
+|------------|--------|--------------------------------------|
+| Relevance  | 0.25   | Audience needs, interests            |
+| Uniqueness | 0.20   | Differentiation from existing       |
+| Feasibility| 0.20   | Resources, time, technical           |
+| Alignment  | 0.20   | Brand voice, pillars                 |
+| Impact     | 0.15   | Reach, engagement potential          |
