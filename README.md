@@ -13,9 +13,9 @@ curl -fsSL https://raw.githubusercontent.com/esmondo/berkarja/main/scripts/insta
 ```bash
 npx skills add esmondo/berkarja
 ```
-Installs to your agent's skills directory. Works from any cwd. Restart your agent to load.
+Single skill. Restart your agent to load.
 
-*Alternative (Cursor-only):* `curl -fsSL https://raw.githubusercontent.com/esmondo/berkarja/main/scripts/install-skill-only.sh | bash`
+*Alternative (Cursor):* `curl -fsSL https://raw.githubusercontent.com/esmondo/berkarja/main/scripts/install-skill-only.sh | bash`
 
 Full install custom path: `curl -fsSL .../install.sh | bash -s -- ~/my-path`
 
@@ -41,8 +41,8 @@ See [content-creation-system/SETUP.md](content-creation-system/SETUP.md) for ful
 ## Repository Structure
 
 ```
-skills/content-creation/         # npx skills add (skill-only, global)
-content-creation-system/        # Full package — configure for your brand
+skills/content-creation-system/ → content-creation-system/  # symlink for npx skills
+content-creation-system/        # Full package (npx skills or curl install)
 ├── sub-agents/                 # Validator, planner, trends, persona, analyst, distributor, research, setup-wizard
 ├── knowledge-base/              # Templates and best practices
 ├── scripts/                    # Shared utilities
